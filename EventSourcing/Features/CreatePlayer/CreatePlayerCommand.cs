@@ -2,6 +2,9 @@
 
 namespace EventSourcing.Features.CreatePlayer
 {
-    public record CreatePlayerCommand(string Name, int level): IRequest<int>; // DTO Or request Object
-    
+    public record CreatePlayerCommand: IRequest<int> // DTO Or request Object
+    {
+        public string Name { get; init; }
+        public int Level { get; init; }
+    }    
 }

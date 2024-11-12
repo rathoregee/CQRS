@@ -13,7 +13,7 @@ namespace EventSourcing.Features.CreatePlayer
 
             int id = rnd.Next(1, int.MaxValue);
 
-            ContextHelper.Players.Add(new Player { Id = id, Name = request.Name, Level = request.level});
+            ContextHelper.Players.Add(new Player { Id = id, Name = request.Name, Level = request.Level});
 
             await Task.Delay(0, cancellationToken);
 
