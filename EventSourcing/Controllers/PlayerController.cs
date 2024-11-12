@@ -23,7 +23,7 @@ namespace EventSourcing.Controllers
         {
             var playerId = await _sender.Send(command);
 
-            _logger.LogInformation("request completed");
+            _logger.LogInformation("post request completed");
 
             return Ok(playerId);
         }
@@ -38,7 +38,7 @@ namespace EventSourcing.Controllers
                 return NotFound();
             }
 
-            _logger.LogInformation("request completed");
+            _logger.LogInformation("get request completed");
 
             return Ok(player);
         }
