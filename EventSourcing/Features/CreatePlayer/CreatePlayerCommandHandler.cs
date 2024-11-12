@@ -15,7 +15,7 @@ namespace EventSourcing.Features.CreatePlayer
 
             ContextHelper.Players.Add(new Player { Id = id, Name = request.Name, Level = request.level});
 
-            await Task.Delay(1);
+            await Task.Delay(0, cancellationToken);
 
             return id;
         }

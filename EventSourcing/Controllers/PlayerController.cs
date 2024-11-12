@@ -3,6 +3,8 @@ using EventSourcing.Features.GetPlayerById;
 using EventSourcing.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Optional;
+using Optional.Unsafe;
 
 namespace EventSourcing.Controllers
 {
@@ -29,18 +31,13 @@ namespace EventSourcing.Controllers
         }
 
         [HttpGet("id")]
-        public async Task<ActionResult<Player>> GetPlayer(int id)
+        public async Task<ActionResult<Option<Player>>> GetPlayer(int id)
         {
-            var player = await _sender.Send(new GetPlayerByIdQuery(id));
-
-            if (player == null) {
-
-                return NotFound();
-            }
-
+            var option = await _sender.Send(new GetPlayerByIdQuery(id));
+          
             _logger.LogInformation("get request completed");
 
-            return Ok(player);
+            return option.HasValue?  Ok(option.ValueOrDefault()) : NotFound();
         }
     }
 }
