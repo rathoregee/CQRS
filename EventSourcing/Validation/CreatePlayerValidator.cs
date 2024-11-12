@@ -9,8 +9,9 @@ namespace EventSourcing.Validation
     {
         public CreatePlayerValidator()
         {
-            RuleFor(x => x.Level).LessThan(1).WithMessage("level is required and cannot be less than zero");
-            RuleFor(x => x.Level).GreaterThan(int.MaxValue).WithMessage("value is greater than max value");
+            RuleFor(x => x.Name).NotEmpty();
+            RuleFor(x => x.Name).NotNull();
+            RuleFor(x => x.Level).GreaterThan(0).WithMessage("level is required and cannot be less than zero");            
         }
     }
 }
