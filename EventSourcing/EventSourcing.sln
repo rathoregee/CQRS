@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSourcing", "EventSourcing.csproj", "{0ABB7563-2020-4585-A498-FF108265ECDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSourcing", "EventSourcing.csproj", "{0ABB7563-2020-4585-A498-FF108265ECDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventSoucring.Tests", "..\EventSoucring.Tests\EventSoucring.Tests.csproj", "{0BF60E8B-D373-498E-AAA9-99A86E90415E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventSoucring.Tests", "..\EventSoucring.Tests\EventSoucring.Tests.csproj", "{0BF60E8B-D373-498E-AAA9-99A86E90415E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
